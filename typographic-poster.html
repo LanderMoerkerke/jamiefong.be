@@ -1,0 +1,690 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<!-- Mirrored from jamiefong.be/typographic-poster by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Nov 2021 15:13:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"e7fb1b89a0",applicationID:"750147145"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("../pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/93f5401c-5ac4-4d0d-8195-767249a48394_rw_12002783.jpg")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1211.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description"  content="School assignment:
+
+Read the poem and translate your personal interpretation to a (typo)graphic poster. Only work with two colors.
+
+Used poem:
+
+Een kind
+Wervelend
+Als de zachte zon
+Een spel van kleur
+De gouden vrouw
+Vrolijk als sterachten
+
+Een drukte
+Weelderig
+Als de kromme clown
+Een beeld van blij
+De geklede beesten
+Dansend als vuurgolven
+
+- by Leen Ceurvelts
+
+
+
+School: Arteveldehogeschool
+Study: Graphical and Digital Media - Crossmedia Design - Graphic Design
+Academic year: 2019-2020" />
+      <meta name="twitter:card"  content="summary_large_image" />
+      <meta name="twitter:site"  content="@AdobePortfolio" />
+      <meta  property="og:title" content="Jamie Fong - Typographic poster" />
+      <meta  property="og:description" content="School assignment:
+
+Read the poem and translate your personal interpretation to a (typo)graphic poster. Only work with two colors.
+
+Used poem:
+
+Een kind
+Wervelend
+Als de zachte zon
+Een spel van kleur
+De gouden vrouw
+Vrolijk als sterachten
+
+Een drukte
+Weelderig
+Als de kromme clown
+Een beeld van blij
+De geklede beesten
+Dansend als vuurgolven
+
+- by Leen Ceurvelts
+
+
+
+School: Arteveldehogeschool
+Study: Graphical and Digital Media - Crossmedia Design - Graphic Design
+Academic year: 2019-2020" />
+      <meta  property="og:image" content="https://pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/5387b643-9bc3-4fd5-ad8c-f62929366ca7_car_4x3.jpg?h=be76f49a6749851d54212c3e83239580" />
+        <link rel="icon" href="../pro2-bar-s3-cdn-cf.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/142eacc7-1553-4288-9a7d-c968290f4fcf_carw_1x1x32556d.png?h=5da889438bc0b72d388d3d63a7beb37d" />
+      <link rel="stylesheet" href="dist/css/main.css" type="text/css" />
+      <link rel="stylesheet" href="../pro2-bar-s3-cdn-cf6.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/717829a48b5fad64747b7bf2f577ae731635434770d489.css?h=573a80d08a09d7ffbfd335ddce903858" type="text/css" />
+    <link rel="canonical" href="typographic-poster.html" />
+      <title>Jamie Fong - Typographic poster</title>
+    <script type="text/javascript" src="../use.typekit.net/ik/2pTybEcSsOYFfdYdlxfRuVk2HY7V3PJ2xniVtXT9UKCfezqgfHYEBsJzwD9oFDIDWDgqFRwoF2ZKjQqow2qtFQ4cFcs8ZAsqFh4K5QwhwhjUwRgcFcIowAJ-yMI7OcTydA88ZcN0ZkoKZP37OcuoSeNkieZzde8zOcFzdP?cb=" async onload="
+    try {
+      window.Typekit.load();
+    } catch (e) {
+      console.warn('Typekit not loaded.');
+    }
+    "></script>
+</head>
+  <body class="transition-enabled">  <div class='page-background-video page-background-video-with-panel'>
+  </div>
+  <div class="js-responsive-nav">
+    <div class="responsive-nav has-social">
+      <div class="close-responsive-click-area js-close-responsive-nav">
+        <div class="close-responsive-button"></div>
+      </div>
+          <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
+                <div class="gallery-title"><a href="work.html" >Work</a></div>
+      <div class="page-title">
+        <a href="cv.html" >CV</a>
+      </div>
+          </nav>
+        <div class="social pf-nav-social" data-context="theme.nav" data-hover-hint="navSocialIcons" data-hover-hint-placement="bottom-start">
+          <ul>
+                  <li>
+                    <a href="../www.linkedin.com/in/fongjamie/index.html" target="_blank">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 24" style="enable-background:new 0 0 30 24;" xml:space="preserve" class="icon">
+                      <path id="path-1_24_" d="M19.6,19v-5.8c0-1.4-0.5-2.4-1.7-2.4c-1,0-1.5,0.7-1.8,1.3C16,12.3,16,12.6,16,13v6h-3.4
+                        c0,0,0.1-9.8,0-10.8H16v1.5c0,0,0,0,0,0h0v0C16.4,9,17.2,7.9,19,7.9c2.3,0,4,1.5,4,4.9V19H19.6z M8.9,6.7L8.9,6.7
+                        C7.7,6.7,7,5.9,7,4.9C7,3.8,7.8,3,8.9,3s1.9,0.8,1.9,1.9C10.9,5.9,10.1,6.7,8.9,6.7z M10.6,19H7.2V8.2h3.4V19z"/>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:jamiefong168@hotmail.com">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 24" style="enable-background:new 0 0 30 24;" xml:space="preserve" class="icon">
+                        <g>
+                          <path d="M15,13L7.1,7.1c0-0.5,0.4-1,1-1h13.8c0.5,0,1,0.4,1,1L15,13z M15,14.8l7.9-5.9v8.1c0,0.5-0.4,1-1,1H8.1c-0.5,0-1-0.4-1-1 V8.8L15,14.8z"/>
+                        </g>
+                      </svg>
+                    </a>
+                  </li>
+          </ul>
+        </div>
+    </div>
+  </div>
+    <header class="site-header js-site-header  js-fixed-nav" data-context="theme.nav" data-hover-hint="nav" data-hover-hint-placement="top-start">
+        <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
+                <div class="gallery-title"><a href="work.html" >Work</a></div>
+      <div class="page-title">
+        <a href="cv.html" >CV</a>
+      </div>
+        </nav>
+        <div class="logo-wrap" data-context="theme.logo.header" data-hover-hint="logo" data-hover-hint-placement="bottom-start">
+          <div class="logo e2e-site-logo-text logo-image  ">
+    <a href="work.html" class="image-normal image-link">
+      <img src="../pro2-bar-s3-cdn-cf6.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/7c349e01-4863-4b30-811a-68e3afc55af1_rwc_0x0x1207x743x4096592e.png?h=b1fb8fcc2db65009b9319479bda53d23" alt="Jamie Fong">
+    </a>
+          </div>
+        </div>
+        <div class="social pf-nav-social" data-context="theme.nav" data-hover-hint="navSocialIcons" data-hover-hint-placement="bottom-start">
+          <ul>
+                  <li>
+                    <a href="../www.linkedin.com/in/fongjamie/index.html" target="_blank">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 24" style="enable-background:new 0 0 30 24;" xml:space="preserve" class="icon">
+                      <path id="path-1_24_" d="M19.6,19v-5.8c0-1.4-0.5-2.4-1.7-2.4c-1,0-1.5,0.7-1.8,1.3C16,12.3,16,12.6,16,13v6h-3.4
+                        c0,0,0.1-9.8,0-10.8H16v1.5c0,0,0,0,0,0h0v0C16.4,9,17.2,7.9,19,7.9c2.3,0,4,1.5,4,4.9V19H19.6z M8.9,6.7L8.9,6.7
+                        C7.7,6.7,7,5.9,7,4.9C7,3.8,7.8,3,8.9,3s1.9,0.8,1.9,1.9C10.9,5.9,10.1,6.7,8.9,6.7z M10.6,19H7.2V8.2h3.4V19z"/>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:jamiefong168@hotmail.com">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 24" style="enable-background:new 0 0 30 24;" xml:space="preserve" class="icon">
+                        <g>
+                          <path d="M15,13L7.1,7.1c0-0.5,0.4-1,1-1h13.8c0.5,0,1,0.4,1,1L15,13z M15,14.8l7.9-5.9v8.1c0,0.5-0.4,1-1,1H8.1c-0.5,0-1-0.4-1-1 V8.8L15,14.8z"/>
+                        </g>
+                      </svg>
+                    </a>
+                  </li>
+          </ul>
+        </div>
+        <div class="hamburger-click-area js-hamburger">
+          <div class="hamburger">
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
+    </header>
+    <div class="header-placeholder"></div>
+  <div class="site-wrap cfix js-site-wrap">
+    <div class="site-container">
+      <div class="site-content e2e-site-content">
+        <main>
+  <div class="page-container" data-context="page.page.container" data-hover-hint="pageContainer">
+    <section class="page standard-modules">
+        <header class="page-header content" data-context="pages" data-identity="id:p5f4a5778d56df9ca42b58e49a318992d4b24c7e90881d608c2463" data-hover-hint="pageHeader" data-hover-hint-id="p5f4a5778d56df9ca42b58e49a318992d4b24c7e90881d608c2463">
+            <h1 class="title preserve-whitespace e2e-site-logo-text">Typographic poster</h1>
+            <p class="description">School assignment:
+
+Read the poem and translate your personal interpretation to a (typo)graphic poster. Only work with two colors.
+
+Used poem:
+
+Een kind
+Wervelend
+Als de zachte zon
+Een spel van kleur
+De gouden vrouw
+Vrolijk als sterachten
+
+Een drukte
+Weelderig
+Als de kromme clown
+Een beeld van blij
+De geklede beesten
+Dansend als vuurgolven
+
+- by Leen Ceurvelts
+
+
+
+School: Arteveldehogeschool
+Study: Graphical and Digital Media - Crossmedia Design - Graphic Design
+Academic year: 2019-2020</p>
+        </header>
+      <div class="page-content js-page-content" data-context="pages" data-identity="id:p5f4a5778d56df9ca42b58e49a318992d4b24c7e90881d608c2463">
+        <div id="project-canvas" class="js-project-modules modules content">
+          <div id="project-modules">
+              
+              <div class="project-module module image project-module-image js-js-project-module"  style="padding-top: px;
+padding-bottom: px;
+">
+
+  
+
+  
+     <div class="js-lightbox" data-src="../pro2-bar-s3-cdn-cf3.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/ed54a66f-df18-43b2-b417-5bb839d9197f184b.jpg?h=0753539d00e1414b2ec6d5d1775eea60">
+           <img
+             class="js-lazy e2e-site-project-module-image"
+             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+             data-src="../pro2-bar-s3-cdn-cf3.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/ed54a66f-df18-43b2-b417-5bb839d9197f_rw_1920dccf.jpg?h=5ed41f9d7f2e27af67a62febc93652b3"
+             data-srcset="https://pro2-bar-s3-cdn-cf3.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/ed54a66f-df18-43b2-b417-5bb839d9197f_rw_600.jpg?h=557d91aba77a296c1bde59b7e4f04451 600w,https://pro2-bar-s3-cdn-cf3.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/ed54a66f-df18-43b2-b417-5bb839d9197f_rw_1200.jpg?h=26bc2741cd8c3bdc821a377673ceb09a 1200w,https://pro2-bar-s3-cdn-cf3.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/ed54a66f-df18-43b2-b417-5bb839d9197f_rw_1920.jpg?h=5ed41f9d7f2e27af67a62febc93652b3 1920w,"
+             data-sizes="(max-width: 1920px) 100vw, 1920px"
+             width="1920"
+             height="0"
+             style="padding-bottom: 75%; background: rgba(0, 0, 0, 0.03)"
+             
+           >
+     </div>
+  
+
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module tree project-module-tree js-js-project-module e2e-site-project-module-tree" >
+  <div class="tree-wrapper valign-top">
+      <div class="tree-child-wrapper" style="flex: 3840000000">
+        
+        <div class="project-module module image project-module-image js-js-project-module"  style="padding-top: px;
+padding-bottom: px;
+">
+
+  
+
+  
+     <div class="js-lightbox" data-src="../pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/f63afbb5-b32d-4413-9d16-fe9f388766f70e71.jpg?h=1c60d507797a35af89687b6c8a3416dd">
+           <img
+             class="js-lazy e2e-site-project-module-image"
+             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+             data-src="../pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/f63afbb5-b32d-4413-9d16-fe9f388766f7_rw_3840f7a2.jpg?h=8203ff6c49794e24b3b34449e3b0bc77"
+             data-srcset="https://pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/f63afbb5-b32d-4413-9d16-fe9f388766f7_rw_600.jpg?h=58cd27c03e185792fc7949a238679858 600w,https://pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/f63afbb5-b32d-4413-9d16-fe9f388766f7_rw_1200.jpg?h=6b197e7b342987593f904cc8dae9f806 1200w,https://pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/f63afbb5-b32d-4413-9d16-fe9f388766f7_rw_1920.jpg?h=7893c526b4c4fdd9e655416fa1e03510 1920w,https://pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/f63afbb5-b32d-4413-9d16-fe9f388766f7_rw_3840.jpg?h=8203ff6c49794e24b3b34449e3b0bc77 3840w,"
+             data-sizes="(max-width: 3840px) 100vw, 3840px"
+             width="3840"
+             height="0"
+             style="padding-bottom: 66.67%; background: rgba(0, 0, 0, 0.03)"
+             
+           >
+     </div>
+  
+
+</div>
+
+        
+        
+        
+        
+        
+        
+        
+      </div>
+      <div class="tree-child-wrapper" style="flex: 3838817460">
+        
+        <div class="project-module module image project-module-image js-js-project-module"  style="padding-top: px;
+padding-bottom: px;
+">
+
+  
+
+  
+     <div class="js-lightbox" data-src="../pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/c2bfa514-f523-4bac-a618-520ceb316bc91bfb.jpg?h=41bc2439336959decf5c8c1c48382902">
+           <img
+             class="js-lazy e2e-site-project-module-image"
+             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+             data-src="../pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/c2bfa514-f523-4bac-a618-520ceb316bc9_rw_3840e394.jpg?h=459fb9bfbfcfb0794bcb0f3dcceca89b"
+             data-srcset="https://pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/c2bfa514-f523-4bac-a618-520ceb316bc9_rw_600.jpg?h=4aa12e9879f60b97d725d5e8b3580e44 600w,https://pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/c2bfa514-f523-4bac-a618-520ceb316bc9_rw_1200.jpg?h=e8330cae00040c904277d88b83e90937 1200w,https://pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/c2bfa514-f523-4bac-a618-520ceb316bc9_rw_1920.jpg?h=9e1385f502f006489bad38173c752dad 1920w,https://pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/c2bfa514-f523-4bac-a618-520ceb316bc9_rw_3840.jpg?h=459fb9bfbfcfb0794bcb0f3dcceca89b 3840w,"
+             data-sizes="(max-width: 3840px) 100vw, 3840px"
+             width="3840"
+             height="0"
+             style="padding-bottom: 66.83%; background: rgba(0, 0, 0, 0.03)"
+             
+           >
+     </div>
+  
+
+</div>
+
+        
+        
+        
+        
+        
+        
+        
+      </div>
+  </div>
+</div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="project-module module tree project-module-tree js-js-project-module e2e-site-project-module-tree" >
+  <div class="tree-wrapper valign-top">
+      <div class="tree-child-wrapper" style="flex: 3840000000">
+        
+        <div class="project-module module image project-module-image js-js-project-module"  style="padding-top: px;
+padding-bottom: px;
+">
+
+  
+
+  
+     <div class="js-lightbox" data-src="../pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/52b178c5-ee7b-4e5e-9aea-32bb19eb29521a1c.jpg?h=3ff935527c19cc55430275a9870da2f8">
+           <img
+             class="js-lazy e2e-site-project-module-image"
+             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+             data-src="../pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/52b178c5-ee7b-4e5e-9aea-32bb19eb2952_rw_38406ff3.jpg?h=18c4defaa63683281dda048d34aa10a1"
+             data-srcset="https://pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/52b178c5-ee7b-4e5e-9aea-32bb19eb2952_rw_600.jpg?h=0b92c2c84304950368ecd231ffe76bdd 600w,https://pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/52b178c5-ee7b-4e5e-9aea-32bb19eb2952_rw_1200.jpg?h=a6b66646186ba201af79a5f0a031b65e 1200w,https://pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/52b178c5-ee7b-4e5e-9aea-32bb19eb2952_rw_1920.jpg?h=d0a212b271d351e5138d862e211fd30c 1920w,https://pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/52b178c5-ee7b-4e5e-9aea-32bb19eb2952_rw_3840.jpg?h=18c4defaa63683281dda048d34aa10a1 3840w,"
+             data-sizes="(max-width: 3840px) 100vw, 3840px"
+             width="3840"
+             height="0"
+             style="padding-bottom: 66.83%; background: rgba(0, 0, 0, 0.03)"
+             
+           >
+     </div>
+  
+
+</div>
+
+        
+        
+        
+        
+        
+        
+        
+      </div>
+      <div class="tree-child-wrapper" style="flex: 3838817460">
+        
+        <div class="project-module module image project-module-image js-js-project-module"  style="padding-top: px;
+padding-bottom: px;
+">
+
+  
+
+  
+     <div class="js-lightbox" data-src="../pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/9e637dd9-f72c-4ed7-9018-ad13a6921811771d.jpg?h=217180b8d548e2ea6e0e679c2f8a198a">
+           <img
+             class="js-lazy e2e-site-project-module-image"
+             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+             data-src="../pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/9e637dd9-f72c-4ed7-9018-ad13a6921811_rw_3840df2f.jpg?h=57b944b13cdbc94bab00d1b98f0600e2"
+             data-srcset="https://pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/9e637dd9-f72c-4ed7-9018-ad13a6921811_rw_600.jpg?h=5032b51a3e8f87ebb2d82b0f95547857 600w,https://pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/9e637dd9-f72c-4ed7-9018-ad13a6921811_rw_1200.jpg?h=1406a1d9dfb1c3d217d2905e47daa73d 1200w,https://pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/9e637dd9-f72c-4ed7-9018-ad13a6921811_rw_1920.jpg?h=17be774eb944e478cf47aff79e4df148 1920w,https://pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/9e637dd9-f72c-4ed7-9018-ad13a6921811_rw_3840.jpg?h=57b944b13cdbc94bab00d1b98f0600e2 3840w,"
+             data-sizes="(max-width: 3840px) 100vw, 3840px"
+             width="3840"
+             height="0"
+             style="padding-bottom: 66.83%; background: rgba(0, 0, 0, 0.03)"
+             
+           >
+     </div>
+  
+
+</div>
+
+        
+        
+        
+        
+        
+        
+        
+      </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+          <section class="other-projects" data-context="page.page.other_pages" data-hover-hint="otherPages">
+            <div class="title-wrapper">
+              <div class="title-container">
+                  <h3 class="other-projects-title preserve-whitespace">You may also like</h3>
+              </div>
+            </div>
+            <div class="project-covers">
+                  <a class="project-cover js-project-cover-touch hold-space" href="rebranding-singapore.html" data-context="pages" data-identity="id:p5f4a5fb177131e706fe1fe8b1bdd81f1b5176befa00ae3e83cfa9">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/f6df80bb-cddd-445e-834e-20f9ce0617ae_rwc_108x0x1706x1280x321da4.png?h=f99892165e8629871e8ea511c0b5b924"
+              data-src="../pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/f6df80bb-cddd-445e-834e-20f9ce0617ae_rwc_108x0x1706x1280x1706d81e.png?h=8afebb901a0f4598521c1a9a091c156e"
+              data-srcset="https://pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/f6df80bb-cddd-445e-834e-20f9ce0617ae_rwc_108x0x1706x1280x640.png?h=4f973cc3c0ef4c1b31e8e80517ce454e 640w, https://pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/f6df80bb-cddd-445e-834e-20f9ce0617ae_rwc_108x0x1706x1280x1280.png?h=bea084cf217c08aeed383f66624ea686 1280w, https://pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/f6df80bb-cddd-445e-834e-20f9ce0617ae_rwc_108x0x1706x1280x1366.png?h=c08bfd011cc958c27c74a044bdd0ba16 1366w, https://pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/f6df80bb-cddd-445e-834e-20f9ce0617ae_rwc_108x0x1706x1280x1920.png?h=b9a78729e5fdacf579d4965cf1a9d543 1920w, https://pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/f6df80bb-cddd-445e-834e-20f9ce0617ae_rwc_108x0x1706x1280x1706.png?h=8afebb901a0f4598521c1a9a091c156e 2560w, https://pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/f6df80bb-cddd-445e-834e-20f9ce0617ae_rwc_108x0x1706x1280x1706.png?h=8afebb901a0f4598521c1a9a091c156e 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1200px / 4)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Rebranding Singapore</div>
+                            <div class="date">2020</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="face-sketches.html" data-context="pages" data-identity="id:p60d6085b4aa14522aa30d4aa69305491989c7c6b69c3b1b09084c">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../pro2-bar-s3-cdn-cf2.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/3f3cb140-8359-4ff8-bb0e-b3504b2bd843_rwc_0x663x1920x1440x32ffb9.jpg?h=06254e8f3f740dd71279ac9fc41e73d3"
+              data-src="../pro2-bar-s3-cdn-cf2.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/3f3cb140-8359-4ff8-bb0e-b3504b2bd843_rwc_0x663x1920x1440x1920b74a.jpg?h=9c09273b65ed6c894eea5a2af51c3e88"
+              data-srcset="https://pro2-bar-s3-cdn-cf2.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/3f3cb140-8359-4ff8-bb0e-b3504b2bd843_rwc_0x663x1920x1440x640.jpg?h=074baaefbf75f1e1054ff1a014696888 640w, https://pro2-bar-s3-cdn-cf2.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/3f3cb140-8359-4ff8-bb0e-b3504b2bd843_rwc_0x663x1920x1440x1280.jpg?h=cc38cf58d1e4a9e47c466c79e90e3a29 1280w, https://pro2-bar-s3-cdn-cf2.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/3f3cb140-8359-4ff8-bb0e-b3504b2bd843_rwc_0x663x1920x1440x1366.jpg?h=031017e8abe900e716732b6604f19e43 1366w, https://pro2-bar-s3-cdn-cf2.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/3f3cb140-8359-4ff8-bb0e-b3504b2bd843_rwc_0x663x1920x1440x1920.jpg?h=9c09273b65ed6c894eea5a2af51c3e88 1920w, https://pro2-bar-s3-cdn-cf2.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/3f3cb140-8359-4ff8-bb0e-b3504b2bd843_rwc_0x663x1920x1440x1920.jpg?h=9c09273b65ed6c894eea5a2af51c3e88 2560w, https://pro2-bar-s3-cdn-cf2.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/3f3cb140-8359-4ff8-bb0e-b3504b2bd843_rwc_0x663x1920x1440x1920.jpg?h=9c09273b65ed6c894eea5a2af51c3e88 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1200px / 4)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Face sketches</div>
+                            <div class="date">2020</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="cms-website.html" data-context="pages" data-identity="id:p615d6da86cab798a85dbb2cc581598753eda8601da977541a2133">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../pro2-bar-s3-cdn-cf5.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/695cbd5d-71b8-4222-9a34-093ea6a0d522_carw_4x3x32d3cf.jpg?h=17b6f909efb8d1a05277c79b1fb444f3"
+              data-src="../pro2-bar-s3-cdn-cf5.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/695cbd5d-71b8-4222-9a34-093ea6a0d522_car_4x39bd6.jpg?h=94fa8319f91aaef915d7f9eed78ec3f7"
+              data-srcset="https://pro2-bar-s3-cdn-cf5.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/695cbd5d-71b8-4222-9a34-093ea6a0d522_carw_4x3x640.jpg?h=39e40de2de2b915a3effcc3cd315cd44 640w, https://pro2-bar-s3-cdn-cf5.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/695cbd5d-71b8-4222-9a34-093ea6a0d522_carw_4x3x1280.jpg?h=a726354f36853c3ec4621aa4d491afe3 1280w, https://pro2-bar-s3-cdn-cf5.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/695cbd5d-71b8-4222-9a34-093ea6a0d522_carw_4x3x1366.jpg?h=09c7801d77b084af49baeeb950d565e0 1366w, https://pro2-bar-s3-cdn-cf5.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/695cbd5d-71b8-4222-9a34-093ea6a0d522_carw_4x3x1920.jpg?h=44b3c6c120e806b107ddf63dabe7eca1 1920w, https://pro2-bar-s3-cdn-cf5.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/695cbd5d-71b8-4222-9a34-093ea6a0d522_carw_4x3x2560.jpg?h=5bb5f284caf616e04ba64af9f5fe1979 2560w, https://pro2-bar-s3-cdn-cf5.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/695cbd5d-71b8-4222-9a34-093ea6a0d522_carw_4x3x5120.jpg?h=160b0667689a1d500b265da490bca4a2 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1200px / 4)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">CMS Website</div>
+                            <div class="date">2021</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="design-a-webpage-based-on-a-corporate-identity.html" data-context="pages" data-identity="id:p5f4a6897edcc9343a28481310372784251959bf7fb78d455a340f">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../pro2-bar-s3-cdn-cf6.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/aabfafda-531e-4034-88a0-5ce4b3963dc3_rwc_128x0x1664x1248x327ea0.jpg?h=aef93a48ea91c990e75ee64c844061c1"
+              data-src="../pro2-bar-s3-cdn-cf6.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/aabfafda-531e-4034-88a0-5ce4b3963dc3_rwc_128x0x1664x1248x166437e8.jpg?h=eaf6041954d97c710cbd2a80a6c591ee"
+              data-srcset="https://pro2-bar-s3-cdn-cf6.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/aabfafda-531e-4034-88a0-5ce4b3963dc3_rwc_128x0x1664x1248x640.jpg?h=933cb7394b68bc588ba8d716ed0db5f2 640w, https://pro2-bar-s3-cdn-cf6.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/aabfafda-531e-4034-88a0-5ce4b3963dc3_rwc_128x0x1664x1248x1280.jpg?h=a49bef21749bb49c4f8f9b5a66feaec7 1280w, https://pro2-bar-s3-cdn-cf6.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/aabfafda-531e-4034-88a0-5ce4b3963dc3_rwc_128x0x1664x1248x1366.jpg?h=07d313f1d736f7c3c99647e56bd1e035 1366w, https://pro2-bar-s3-cdn-cf6.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/aabfafda-531e-4034-88a0-5ce4b3963dc3_rwc_128x0x1664x1248x1920.jpg?h=6727944ac5c82636a902123f379e1957 1920w, https://pro2-bar-s3-cdn-cf6.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/aabfafda-531e-4034-88a0-5ce4b3963dc3_rwc_128x0x1664x1248x1664.jpg?h=eaf6041954d97c710cbd2a80a6c591ee 2560w, https://pro2-bar-s3-cdn-cf6.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/aabfafda-531e-4034-88a0-5ce4b3963dc3_rwc_128x0x1664x1248x1664.jpg?h=eaf6041954d97c710cbd2a80a6c591ee 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1200px / 4)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Design a webpage based on a corporate identity</div>
+                            <div class="date">2017</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="touch-poster.html" data-context="pages" data-identity="id:p60d624703ffbba258b7af073c4bde383e327cc44561c7af756eaa">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/c17b6774-d640-45f6-9416-91301a19d067_carw_4x3x3259d5.jpg?h=ab484fbe90bcf88bc8cb61e41922e9f4"
+              data-src="../pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/c17b6774-d640-45f6-9416-91301a19d067_car_4x3d025.jpg?h=be9771ad1faae54f6e438147580dfd72"
+              data-srcset="https://pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/c17b6774-d640-45f6-9416-91301a19d067_carw_4x3x640.jpg?h=8e731a17c2dfbce4c7e5d7e5f1b31a1a 640w, https://pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/c17b6774-d640-45f6-9416-91301a19d067_carw_4x3x1280.jpg?h=38e13ab1168d39006417b04570e8e168 1280w, https://pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/c17b6774-d640-45f6-9416-91301a19d067_carw_4x3x1366.jpg?h=214949f5b6e31a0f633029b60255ea8c 1366w, https://pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/c17b6774-d640-45f6-9416-91301a19d067_carw_4x3x1920.jpg?h=38b1d0fa25cec2f1e8aca6394262a6cc 1920w, https://pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/c17b6774-d640-45f6-9416-91301a19d067_carw_4x3x2560.jpg?h=076d167cd9bc05325e3aa03a7a5d9d16 2560w, https://pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/c17b6774-d640-45f6-9416-91301a19d067_carw_4x3x5120.jpg?h=3146694a7fa400eb46a4312f0c242826 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1200px / 4)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Touch poster</div>
+                            <div class="date">2021</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="responsive-website-walknow.html" data-context="pages" data-identity="id:p615c6f3cbf31c2d78bf49f9df07c0f000d974f9748213fd6b8533">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/f409a4b2-63d7-460c-84ff-a6839ec33e6b_rwc_0x0x4000x3000x323af6.jpg?h=d8daa2e6de85a4351f2a1f051af0a85b"
+              data-src="../pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/f409a4b2-63d7-460c-84ff-a6839ec33e6b_rwc_0x0x4000x3000x40002f6b.jpg?h=b65cb92978a59ce87275c3c82e8fe7fb"
+              data-srcset="https://pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/f409a4b2-63d7-460c-84ff-a6839ec33e6b_rwc_0x0x4000x3000x640.jpg?h=5e63561fa4f7f02be0e0ff4204b5b332 640w, https://pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/f409a4b2-63d7-460c-84ff-a6839ec33e6b_rwc_0x0x4000x3000x1280.jpg?h=a8d00513ae1884650790023b273315f7 1280w, https://pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/f409a4b2-63d7-460c-84ff-a6839ec33e6b_rwc_0x0x4000x3000x1366.jpg?h=afea40795dd33f0ac13bf11173334779 1366w, https://pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/f409a4b2-63d7-460c-84ff-a6839ec33e6b_rwc_0x0x4000x3000x1920.jpg?h=66ee8bcc624d3cf5350c375fef443a07 1920w, https://pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/f409a4b2-63d7-460c-84ff-a6839ec33e6b_rwc_0x0x4000x3000x2560.jpg?h=0a5d959345b2d3b23fe67b1725232040 2560w, https://pro2-bar-s3-cdn-cf4.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/f409a4b2-63d7-460c-84ff-a6839ec33e6b_rwc_0x0x4000x3000x4000.jpg?h=b65cb92978a59ce87275c3c82e8fe7fb 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1200px / 4)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Responsive website: WalkNow</div>
+                            <div class="date">2021</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="graafies-magazine.html" data-context="pages" data-identity="id:p5f4a512d3aede7807429d883b573a7f68ebba836c3cf69cc4a643">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/c28e4d43-66c3-47f6-84e1-68051acef12c_carw_4x3x32d00d.jpg?h=dc6bfa5a2eab35a49f0f7d2c265070da"
+              data-src="../pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/c28e4d43-66c3-47f6-84e1-68051acef12c_car_4x324cf.jpg?h=1cdb6d32ac93519b57cf5dac61df3df9"
+              data-srcset="https://pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/c28e4d43-66c3-47f6-84e1-68051acef12c_carw_4x3x640.jpg?h=ea16c612416591d79fe44b1a5c256b11 640w, https://pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/c28e4d43-66c3-47f6-84e1-68051acef12c_carw_4x3x1280.jpg?h=d81383d111c2cf0d1245ad97ef522684 1280w, https://pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/c28e4d43-66c3-47f6-84e1-68051acef12c_carw_4x3x1366.jpg?h=92e72f865d031136610a0ee3f0cb6bf5 1366w, https://pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/c28e4d43-66c3-47f6-84e1-68051acef12c_carw_4x3x1920.jpg?h=9ad5cd91d5d10cfc723b209938404e91 1920w, https://pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/c28e4d43-66c3-47f6-84e1-68051acef12c_carw_4x3x2560.jpg?h=0143308d8dbab59eca04d3a75e8c8e79 2560w, https://pro2-bar-s3-cdn-cf1.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/c28e4d43-66c3-47f6-84e1-68051acef12c_carw_4x3x5120.jpg?h=89a0c3349279102ead34f12c926c233f 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1200px / 4)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Graafies magazine</div>
+                            <div class="date">2020</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="animation-video-me-myself-why.html" data-context="pages" data-identity="id:p615c4bf92febe119233fd827482e0537cacff23f17652939f1e5e">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../pro2-bar-s3-cdn-cf3.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/e2e54e68-36aa-4da4-89e7-3972886e07af_carw_4x3x32fb19.jpg?h=f68bdca0b5cc7058701ec8e30713d4bf"
+              data-src="../pro2-bar-s3-cdn-cf3.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/e2e54e68-36aa-4da4-89e7-3972886e07af_car_4x32324.jpg?h=9e1921913c97e69cc7194ada5f5cff2e"
+              data-srcset="https://pro2-bar-s3-cdn-cf3.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/e2e54e68-36aa-4da4-89e7-3972886e07af_carw_4x3x640.JPG?h=64101d1dd28995e8bc7462611a5f18c6 640w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/e2e54e68-36aa-4da4-89e7-3972886e07af_carw_4x3x1280.JPG?h=734b64dd72de85fb5233bd4b0e06b884 1280w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/e2e54e68-36aa-4da4-89e7-3972886e07af_carw_4x3x1366.JPG?h=5c8fdc06156c925659e0991b17bac1e7 1366w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/e2e54e68-36aa-4da4-89e7-3972886e07af_carw_4x3x1920.JPG?h=fd7e0a55b3fc99f1f3761508f49998f4 1920w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/e2e54e68-36aa-4da4-89e7-3972886e07af_carw_4x3x2560.JPG?h=108c807302800d17a73f18178c2f35ad 2560w, https://pro2-bar-s3-cdn-cf3.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/e2e54e68-36aa-4da4-89e7-3972886e07af_carw_4x3x5120.JPG?h=ce859f49d13b97fdbe066758ecbfe5d7 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1200px / 4)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Animation video: Me, Myself &amp; Why</div>
+                            <div class="date">2021</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="animated-explainer-video-netwerkpunt-radar.html" data-context="pages" data-identity="id:p615c50cf2ab327ecc3101491763432c886b7d9e9e1989ae8e44a8">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../pro2-bar-s3-cdn-cf2.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/34cb9746-6651-46df-b6c0-9f5fbf49c39b_rwc_98x0x1439x1080x327910.jpg?h=f5edf7304aa0c3d0d946eb7155af6eb5"
+              data-src="../pro2-bar-s3-cdn-cf2.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/34cb9746-6651-46df-b6c0-9f5fbf49c39b_rwc_98x0x1439x1080x14399456.jpg?h=4221044c054f055e75b8a0f2d4017327"
+              data-srcset="https://pro2-bar-s3-cdn-cf2.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/34cb9746-6651-46df-b6c0-9f5fbf49c39b_rwc_98x0x1439x1080x640.jpg?h=9b9e0f8ebbfbbad32360e4659c318afe 640w, https://pro2-bar-s3-cdn-cf2.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/34cb9746-6651-46df-b6c0-9f5fbf49c39b_rwc_98x0x1439x1080x1280.jpg?h=e91bcbf559481299bfdc48911c1df278 1280w, https://pro2-bar-s3-cdn-cf2.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/34cb9746-6651-46df-b6c0-9f5fbf49c39b_rwc_98x0x1439x1080x1366.jpg?h=a0f4512d5a3f247e3166ecdab7ed2e23 1366w, https://pro2-bar-s3-cdn-cf2.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/34cb9746-6651-46df-b6c0-9f5fbf49c39b_rwc_98x0x1439x1080x1920.jpg?h=1a998adc4b1e9bb3f3f0cc706bf8766b 1920w, https://pro2-bar-s3-cdn-cf2.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/34cb9746-6651-46df-b6c0-9f5fbf49c39b_rwc_98x0x1439x1080x1439.jpg?h=4221044c054f055e75b8a0f2d4017327 2560w, https://pro2-bar-s3-cdn-cf2.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/34cb9746-6651-46df-b6c0-9f5fbf49c39b_rwc_98x0x1439x1080x1439.jpg?h=4221044c054f055e75b8a0f2d4017327 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1200px / 4)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Animated explainer video: Netwerkpunt Radar</div>
+                            <div class="date">2021</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="project-cover js-project-cover-touch hold-space" href="notepad.html" data-context="pages" data-identity="id:p60d60dab76c8821c3d55f810ff8da039d5ace1e84ec0a7d0118ca">
+                      <div class="cover-image-wrap">
+                        <div class="cover-image">
+                            <div class="cover cover-normal">
+
+            <img
+              class="cover__img js-lazy"
+              src="../pro2-bar-s3-cdn-cf5.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/6b5a3615-2f68-4512-8d05-238aafe36729_carw_4x3x327ad9.jpg?h=566c283806cfecfd2ccdfec34ddb5d27"
+              data-src="../pro2-bar-s3-cdn-cf5.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/6b5a3615-2f68-4512-8d05-238aafe36729_car_4x332ec.jpg?h=ec8a123603b67d22839c79b0a1f72115"
+              data-srcset="https://pro2-bar-s3-cdn-cf5.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/6b5a3615-2f68-4512-8d05-238aafe36729_carw_4x3x640.jpg?h=62cd280158a76bcfef2318d6ade4d0cf 640w, https://pro2-bar-s3-cdn-cf5.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/6b5a3615-2f68-4512-8d05-238aafe36729_carw_4x3x1280.jpg?h=c3f030415f5e37f198ab118c6da44135 1280w, https://pro2-bar-s3-cdn-cf5.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/6b5a3615-2f68-4512-8d05-238aafe36729_carw_4x3x1366.jpg?h=730481654fcc6ff980f09d6bcdafddcb 1366w, https://pro2-bar-s3-cdn-cf5.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/6b5a3615-2f68-4512-8d05-238aafe36729_carw_4x3x1920.jpg?h=be85b80bd0f5330e6f2f9af1a18d0d5f 1920w, https://pro2-bar-s3-cdn-cf5.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/6b5a3615-2f68-4512-8d05-238aafe36729_carw_4x3x2560.jpg?h=6e147c2361be8c7685836c3c9b694cee 2560w, https://pro2-bar-s3-cdn-cf5.myportfolio.com/d4677956-e8dd-403a-b22f-7663c10a8548/6b5a3615-2f68-4512-8d05-238aafe36729_carw_4x3x5120.jpg?h=171ef60a8b323e01a7ce1830bde223f3 5120w"
+              data-sizes="(max-width: 540px) 100vw, (max-width: 768px) 50vw, calc(1200px / 4)"
+            >
+                                      </div>
+                        </div>
+                      </div>
+                    <div class="details-wrap">
+                      <div class="details">
+                        <div class="details-inner">
+                            <div class="title preserve-whitespace">Notepad</div>
+                            <div class="date">2020</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+            </div>
+          </section>
+        <section class="back-to-top" data-hover-hint="backToTop">
+          <a href="#"><span class="arrow">&uarr;</span><span class="preserve-whitespace">Back to Top</span></a>
+        </section>
+        <a class="back-to-top-fixed js-back-to-top back-to-top-fixed-with-panel" data-hover-hint="backToTop" data-hover-hint-placement="top-start" href="#">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 26 26" style="enable-background:new 0 0 26 26;" xml:space="preserve" class="icon icon-back-to-top">
+          <g>
+            <path d="M13.8,1.3L21.6,9c0.1,0.1,0.1,0.3,0.2,0.4c0.1,0.1,0.1,0.3,0.1,0.4s0,0.3-0.1,0.4c-0.1,0.1-0.1,0.3-0.3,0.4
+              c-0.1,0.1-0.2,0.2-0.4,0.3c-0.2,0.1-0.3,0.1-0.4,0.1c-0.1,0-0.3,0-0.4-0.1c-0.2-0.1-0.3-0.2-0.4-0.3L14.2,5l0,19.1
+              c0,0.2-0.1,0.3-0.1,0.5c0,0.1-0.1,0.3-0.3,0.4c-0.1,0.1-0.2,0.2-0.4,0.3c-0.1,0.1-0.3,0.1-0.5,0.1c-0.1,0-0.3,0-0.4-0.1
+              c-0.1-0.1-0.3-0.1-0.4-0.3c-0.1-0.1-0.2-0.2-0.3-0.4c-0.1-0.1-0.1-0.3-0.1-0.5l0-19.1l-5.7,5.7C6,10.8,5.8,10.9,5.7,11
+              c-0.1,0.1-0.3,0.1-0.4,0.1c-0.2,0-0.3,0-0.4-0.1c-0.1-0.1-0.3-0.2-0.4-0.3c-0.1-0.1-0.1-0.2-0.2-0.4C4.1,10.2,4,10.1,4.1,9.9
+              c0-0.1,0-0.3,0.1-0.4c0-0.1,0.1-0.3,0.3-0.4l7.7-7.8c0.1,0,0.2-0.1,0.2-0.1c0,0,0.1-0.1,0.2-0.1c0.1,0,0.2,0,0.2-0.1
+              c0.1,0,0.1,0,0.2,0c0,0,0.1,0,0.2,0c0.1,0,0.2,0,0.2,0.1c0.1,0,0.1,0.1,0.2,0.1C13.7,1.2,13.8,1.2,13.8,1.3z"/>
+          </g>
+          </svg>
+        </a>
+  </div>
+              <footer class="site-footer" data-hover-hint="footer">
+                <div class="footer-text">
+                  
+                </div>
+              </footer>
+        </main>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"e7fb1b89a0","applicationID":"750147145","transactionName":"ZwZaYkJVDERXUxULCV5Me0NDQA1aGWsmJzJtQxdtS0QDQ14KT0gbbQ==","queueTime":0,"applicationTime":15,"atts":"S0FNFApPHxsUUUNYHU0e","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+<script type="text/javascript">
+  // fix for Safari's back/forward cache
+  window.onpageshow = function(e) {
+    if (e.persisted) { window.location.reload(); }
+  };
+</script>
+  <script type="text/javascript">var __config__ = {"page_id":"p5f4a5778d56df9ca42b58e49a318992d4b24c7e90881d608c2463","theme":{"name":"lukas"},"pageTransition":true,"linkTransition":true,"disableDownload":false,"localizedValidationMessages":{"required":"This field is required","Email":"This field must be a valid email address"},"lightbox":{"enabled":true,"color":{"opacity":0.94,"hex":"#fff"}},"cookie_banner":{"enabled":false}};</script>
+  <script type="text/javascript" src="site/translationscb21?cb="></script>
+  <script type="text/javascript" src="dist/js/maincb21.js?cb="></script>
+
+<!-- Mirrored from jamiefong.be/typographic-poster by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Nov 2021 15:14:02 GMT -->
+</html>
